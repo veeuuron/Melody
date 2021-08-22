@@ -166,6 +166,14 @@ path.current-floor{
   opacity: 1;
   cursor: pointer;
 }
+path.current-flat{
+  opacity: 1;
+}
+a.current-flat-item{
+  color: #3596f5; /* меняем цвет */
+  text-decoration: underline; /* добавляем подчёркивание */
+  cursor: pointer; /* сделали, чтобы при наведении на path была рука :D */
+}
 .modal-title{
   font-family: "Bebas Neue", sans-serif;
   font-weight: normal;

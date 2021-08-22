@@ -6,6 +6,9 @@ $(document).ready(function () {
   var modal = $(".modal"); // Переменная для окна с этажамт
   var modalCloseButton = $(".modal-close-button");
   var viewFlatsButton = $(".view-flats");
+  var currentFlat=1;
+  var flatsPath=$(".flats path"); // квартиры в SVG
+  var flatsPathItem=$(".flat-item a"); // х-ки квартир
 
         // При наведении мышки на этаж
   floorPath.on("mouseover", function () { 
@@ -39,6 +42,25 @@ $(document).ready(function () {
       $(`[data-floor=${usCurrentFloor}]`).toggleClass("current-floor"); // подсвечивание этажа
     }
   });
+
+    // Наводка на квартиру на макете (функиця)
+    flatsPath.on("mouseover", function () {
+      currentFlat=$(this).attr("data-flats"); //записываем текущее значение в переменную с квартирами
+      flatsPath.removeClass("current-flat"); // удаляем клас(подсветку)
+      flatsPathItem.removeClass("current-flat-item"); // удаляем класс характеристик квартиры
+      $(`[data-flats=${currentFlat}]`).toggleClass("current-flat"); // добавляем класс квартиры
+      $(`[data-item=${currentFlat}]`).toggleClass("current-flat-item"); // добавляем класс характеристик квартиры
+    });
+    
+    // Наводка на квартиру в списке
+    flatsPathItem.on("mouseover", function () {
+      currentFlat=$(this).attr("data-item");
+      flatsPath.removeClass("current-flat");
+      flatsPathItem.removeClass("current-flat-item");
+      $(`[data-flats=${currentFlat}]`).toggleClass("current-flat");
+      $(`[data-item=${currentFlat}]`).toggleClass("current-flat-item");
+    });
+
   function toggleModal(){ // функция открыть-закрыть окно
     modal.toggleClass("is-open");
   }
