@@ -225,3 +225,62 @@ a.current-flat-item{
 .modal-close-button:hover{
   opacity: 0.7;
 }
+.footer{
+  
+  background-color: #D7D7D7;
+  font-family: "Roboto", sans-serif;
+}
+.footer-navbar{
+  max-width: 1280px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+}
+.container{
+  display: flex;
+  align-items:center;
+}
+.footer-logo{
+  padding: 50px 37px 56px 0px;
+}
+.footer-contacts{
+  margin-right: 59px;
+}
+.footer-text{
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #635854;
+}
+.footer-phone{
+  text-decoration: none;
+  font-weight: bold;
+  color:#635854;
+}
+.footer-links{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+.footer-link-item{
+  margin-left: 7.5px;
+  margin-right: 7.5px;
+}
+.footer-navbar-menu{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+.footer-navbar-item{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.footer-navbar-link{
+  color: #635854;
+  font-size: 16px;
+line-height: 19px;
+}
